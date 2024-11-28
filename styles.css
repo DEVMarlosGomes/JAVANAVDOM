@@ -34,10 +34,10 @@ h1 {
 /* Animações */
 @keyframes backgroundAnimation {
   0% {
-    background: linear-gradient(135deg, #ff6b6b, #f1a7a8);
+    background: linear-gradient(135deg, #a10099, #f1a7a8);
   }
   100% {
-    background: linear-gradient(135deg, #4caf50, #81c784);
+    background: linear-gradient(135deg, #ffd000, #81c784);
   }
 }
 
@@ -85,7 +85,7 @@ h1 {
   left: 50%;
   width: 150%;
   height: 150%;
-  background-color: #4caf50;
+  background-color: #14a7bb;
   transform: translate(-50%, -50%) scale(0);
   border-radius: 50%;
   transition: transform 0.4s ease;
@@ -99,7 +99,7 @@ h1 {
 .jogo-item:hover {
   transform: translateY(-15px); /* Efeito de "pulo" mais forte */
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(145deg, #4caf50, #81c784); /* Altera o fundo no hover */
+  background: linear-gradient(145deg, #133b91, #81c784); /* Altera o fundo no hover */
   transition: background 0.5s ease, box-shadow 0.3s ease;
 }
 
@@ -112,7 +112,7 @@ h1 {
 .jogo-item h2 {
   font-size: 1.6rem;
   margin-bottom: 15px;
-  color: #4caf50;
+  color: #dfbd01;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
