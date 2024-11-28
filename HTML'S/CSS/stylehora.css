@@ -1,0 +1,42 @@
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* Manhã */
+  body.manha {
+    background: linear-gradient(to right, #ff9a8b, #ff6a88);  /* Gradiente suave de rosa e vermelho */
+  }
+  
+  body.manha h1 {
+    color: #ffeb3b; /* Cor dourada para a saudação */
+  }
+  
+  /* Tarde */
+  body.tarde {
+    background: linear-gradient(to right, #ffb347, #ffcc33);  /* Gradiente de laranja */
+  }
+  
+  body.tarde h1 {
+    color: #fff; /* Cor branca para a saudação */
+  }
+  
+  /* Noite */
+  body.noite {
+    background: linear-gradient(to right, #09223b, #34495e);  /* Gradiente escuro de azul e cinza */
+  }
+  
+  body.noite h1 {
+    color: #ecf0f1;  /* Cor clara para a saudação */
+  }
+  

@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saudação de Acordo com a Hora</title>
-</head>
-<body>
-
+    <link rel="stylesheet" href="CSS/stylehora.css" />
+  </head>
+  <body>
     <h1 id="saudacao"></h1>
 
     <script>
-        // Função para exibir saudação baseada na hora atual
-        function saudacaoPorHora() {
-            const agora = new Date(); // Obtém a data e hora atuais
-            const hora = agora.getHours(); // Extrai a hora atual (0 a 23)
+      // Função para exibir saudação baseada na hora atual
+      function saudacaoPorHora() {
+        const agora = new Date(); // Obtém a data e hora atuais
+        const hora = agora.getHours(); // Extrai a hora atual (0 a 23)
 
-            let saudacao = '';
+        let saudacao = '';
+        let periodo = '';
 
-            // Verifica a hora e escolhe a saudação apropriada
-            if (hora >= 0 && hora < 12) {
-                saudacao = "Bom dia!";
-            } else if (hora >= 12 && hora < 18) {
-                saudacao = "Boa tarde!";
-            } else {
-                saudacao = "Boa noite!";
-            }
-
-            // Exibe a saudação no elemento com id "saudacao"
-            document.getElementById("saudacao").textContent = saudacao;
+        // Verifica a hora e escolhe a saudação apropriada
+        if (hora >= 0 && hora < 12) {
+          saudacao = "Bom dia!";
+          periodo = "manha";  // Adiciona a classe 'manha'
+        } else if (hora >= 12 && hora < 18) {
+          saudacao = "Boa tarde!";
+          periodo = "tarde";  // Adiciona a classe 'tarde'
+        } else {
+          saudacao = "Boa noite!";
+          periodo = "noite";  // Adiciona a classe 'noite'
         }
 
-        // Chama a função para exibir a saudação assim que a página for carregada
-        saudacaoPorHora();
-    </script>
+        // Aplica a classe ao body
+        document.body.classList.add(periodo);
 
-</body>
+        // Exibe a saudação no elemento com id "saudacao"
+        document.getElementById("saudacao").textContent = saudacao;
+      }
+
+      // Chama a função para exibir a saudação assim que a página for carregada
+      saudacaoPorHora();
+    </script>
+  </body>
 </html>
