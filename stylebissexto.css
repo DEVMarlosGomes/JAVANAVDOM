@@ -1,0 +1,103 @@
+/* Resetando margens e padding para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo básico do body */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Contêiner principal */
+  .container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efeito de zoom quando o formulário está carregado */
+  .container:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Título do formulário */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3e64ff;
+    font-weight: bold;
+  }
+  
+  /* Parágrafo explicativo */
+  p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo do input de número */
+  input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Estilo do input quando está em foco */
+  input[type="number"]:focus {
+    border-color: #3e64ff;
+  }
+  
+  /* Estilo do botão */
+  button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #3e64ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2e4bb8;
+  }
+  
+  /* Estilo de resultado (erro ou sucesso) */
+  #resultado {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Estilo quando o ano é bissexto */
+  .sucesso {
+    color: #4caf50;
+    transform: scale(1.1);
+  }
+  
+  /* Estilo quando o ano não é bissexto */
+  .erro {
+    color: #f44336;
+    transform: scale(1.1);
+  }
+  

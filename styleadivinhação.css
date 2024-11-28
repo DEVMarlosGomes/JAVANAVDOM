@@ -1,0 +1,130 @@
+/* Resetando algumas configurações padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fundo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Contêiner principal */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 30px;
+}
+
+/* Contêiner do formulário */
+.game-container {
+    width: 100%;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo do campo de entrada */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.input-group input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50;
+}
+
+/* Botão de jogar */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Resultado da tentativa */
+.resultado {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.acerto {
+    color: #4CAF50;
+    font-weight: bold;
+    animation: sucesso 1s ease;
+}
+
+.erro {
+    color: #f44336;
+    font-weight: bold;
+    animation: erro 1s ease;
+}
+
+/* Animações de sucesso e erro */
+@keyframes sucesso {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes erro {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

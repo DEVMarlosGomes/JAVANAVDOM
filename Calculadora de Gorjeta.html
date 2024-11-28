@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechamento de Conta - Restaurante</title>
+    <link rel="stylesheet" href="stylerestaurante.css">
+</head>
+<body>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Bem-vindo ao nosso Restaurante!</h2>
+            <p>Vamos finalizar o seu pedido? Clique abaixo para iniciar o fechamento da conta.</p>
+            <button class="btn-popup" onclick="openForm()">Fechar Conta</button>
+        </div>
+    </div>
+
+    <div class="form-container" id="formContainer" style="display: none;">
+        <h3>Fechamento de Conta</h3>
+        <form id="fechamentoForm">
+            <div class="form-group">
+                <label for="mesa">Número da Mesa:</label>
+                <input type="number" id="mesa" name="mesa" placeholder="Digite o número da mesa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="valor">Valor Total:</label>
+                <input type="number" id="valor" name="valor" placeholder="R$ 0,00" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gorjeta">Gorjeta (%):</label>
+                <input type="number" id="gorjeta" name="gorjeta" placeholder="Ex: 10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="total">Total a Pagar:</label>
+                <input type="text" id="total" name="total" placeholder="Total final" readonly>
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="btn-submit" onclick="calcularTotal()">Calcular Total</button>
+                <button type="button" class="btn-cancel" onclick="cancelar()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Função para abrir o popup
+        function showPopup() {
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        // Função para abrir o formulário de fechamento de conta
+        function openForm() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('formContainer').style.display = 'block';
+        }
+
+        // Função para calcular o total com gorjeta
+        function calcularTotal() {
+            var valor = parseFloat(document.getElementById('valor').value);
+            var gorjeta = parseFloat(document.getElementById('gorjeta').value);
+            if (!isNaN(valor) && !isNaN(gorjeta)) {
+                var totalGorjeta = valor * (gorjeta / 100);
+                var total = valor + totalGorjeta;
+                document.getElementById('total').value = 'R$ ' + total.toFixed(2);
+            } else {
+                alert("Por favor, preencha todos os campos corretamente.");
+            }
+        }
+
+        // Função para cancelar e fechar o formulário
+        function cancelar() {
+            document.getElementById('formContainer').style.display = 'none';
+            showPopup();
+        }
+
+        // Mostrar o popup inicial
+        showPopup();
+    </script>
+
+</body>
+</html>

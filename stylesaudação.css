@@ -1,0 +1,71 @@
+/* Estilo padrão do body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    transition: background-color 1s ease;
+}
+
+/* Estilo para o bom dia (manhã) */
+body.manha {
+    background-image: url('https://via.placeholder.com/1920x1080.png?text=Bom+Dia');
+    background-size: cover;
+    background-position: center;
+}
+
+body.manha h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF9800;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Estilo para a boa tarde */
+body.tarde {
+    background-image: url('https://via.placeholder.com/1920x1080.png?text=Boa+Tarde');
+    background-size: cover;
+    background-position: center;
+}
+
+body.tarde h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF5722;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Estilo para a boa noite */
+body.noite {
+    background-image: url('https://via.placeholder.com/1920x1080.png?text=Boa+Noite');
+    background-size: cover;
+    background-position: center;
+}
+
+body.noite h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3F51B5;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animação de fade-in para a saudação */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,166 @@
+/* Resetando margens e padding para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff6b6b, #f1a7a8); /* Gradiente vibrante de fundo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  animation: backgroundAnimation 10s infinite alternate; /* Animação de fundo */
+}
+
+/* Título principal */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  animation: textEffect 2s ease-in-out; /* Animação do título */
+}
+
+/* Animações */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #ff6b6b, #f1a7a8);
+  }
+  100% {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+  }
+}
+
+@keyframes textEffect {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Estilo do container de jogos */
+.jogo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Estilo dos itens de jogo */
+.jogo-item {
+  background: #ffffff;
+  background: linear-gradient(145deg, #fff, #f1f1f1); /* Gradiente suave */
+  border-radius: 20px;
+  padding: 30px;
+  width: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.jogo-item:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background-color: #4caf50;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.jogo-item:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.jogo-item:hover {
+  transform: translateY(-15px); /* Efeito de "pulo" mais forte */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #4caf50, #81c784); /* Altera o fundo no hover */
+  transition: background 0.5s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de foco ao clicar nos itens (com escala e suavização) */
+.jogo-item:active {
+  transform: scale(0.98);
+}
+
+/* Estilo do título de cada jogo */
+.jogo-item h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #4caf50;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Estilo da descrição do jogo */
+.jogo-item p {
+  font-size: 1.1rem;
+  color: #333;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Hover nos itens de jogo para mudar a cor do texto */
+.jogo-item:hover p {
+  color: #fff; /* Altera a cor do texto ao passar o mouse */
+}
+
+/* Novo estilo de hover com cores contrastantes */
+.jogo-item:hover h2 {
+  color: #fff; /* Muda o título para branco durante o hover */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra do texto para destacar */
+}
+
+.jogo-item:hover {
+  background-color: #d32f2f; /* Fundo de hover com cor forte */
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px); /* Efeito de "pulo" mais forte */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease, color 0.3s ease-in-out;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .jogo-item {
+    width: 220px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jogo-item {
+    width: 180px;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
