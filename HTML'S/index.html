@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos em JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  </head>
+  <body>
+    <h1>Escolha um Jogo</h1>
+
+    <div class="jogo-container">
+      <div class="jogo-item" onclick="abrirJogo('Calculadora de Gorjeta.html')">
+        <h2>RESTAURANTE</h2>
+        <p>Jogo de calcular gorjeta.</p>
+      </div>
+      <div class="jogo-item" onclick="abrirJogo('Calcular Media Escolar.html')">
+        <h2>BOLETIM ESCOLAR</h2>
+        <p>Média escolar.</p>
+      </div>
+      <div class="jogo-item" onclick="abrirJogo('Jogo de Adivinhação.html')">
+        <h2>Jogo de adivinhação</h2>
+        <p>Jogo de sorte.</p>
+      </div>
+      <div class="jogo-item" onclick="abrirJogo('Saudação de Acordo com a Hora.html')">
+        <h2>Saudações por Periodo</h2>
+        <p>Bom dia - Boa Tarde - Boa Noite.</p>
+      </div>
+      <div class="jogo-item" onclick="abrirJogo('Verificador de Ano Bissexto.html')">
+        <h2>Ano Bissexto</h2>
+        <p>Verificador de Anos Bissextos.</p>
+      </div>
+    </div>
+
+    <script>
+      // Função que será chamada quando o usuário clicar em um dos jogos
+      function abrirJogo(jogo) {
+        // Usamos location.href para redirecionar para a página do jogo
+        location.href = jogo;
+      }
+    </script>
+  </body>
+</html>

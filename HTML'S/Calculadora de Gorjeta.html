@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESTAURANTE</title>
+    <link rel="stylesheet" href="css/stylegorjeta.css" />
+  </head>
+  <body>
+    <script>
+        
+ // Solicita o valor da conta ao usuário
+let valorConta = parseFloat(prompt("Digite o valor da conta:"));
+
+// Solicita a porcentagem de gorjeta ao usuário
+let porcentagemGorjeta = parseFloat(prompt("Digite a porcentagem de gorjeta (ex: 10 para 10%):"));
+
+// Calcula o valor da gorjeta
+let valorGorjeta = (valorConta * porcentagemGorjeta) / 100;
+
+// Calcula o valor total (conta + gorjeta)
+let totalConta = valorConta + valorGorjeta;
+
+// Exibe os resultados
+alert("Valor da conta: R$ " + valorConta.toFixed(2) + "\n" +
+      "Porcentagem de gorjeta: " + porcentagemGorjeta + "%\n" +
+      "Valor da gorjeta: R$ " + valorGorjeta.toFixed(2) + "\n" +
+      "Total a pagar: R$ " + totalConta.toFixed(2));
+
+    </script>
+  </body>
+  <script src="script.js"></script>
+</html>
